@@ -7,7 +7,6 @@ type DbHandler interface {
 
 type SqlHandler interface {
 	Error() error
-	Create(value interface{}) SqlHandler
 	Select(out interface{}) SqlHandler
 	Where(query interface{}, args ...interface{}) SqlHandler
 	Get(out interface{}, where ...interface{}) SqlHandler
