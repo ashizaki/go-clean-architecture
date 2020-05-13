@@ -3,9 +3,8 @@ package service
 import (
 	"context"
 
-	"github.com/pkg/errors"
-
 	"github.com/ashizaki/go-clean-architecture/domain/repository"
+	"github.com/pkg/errors"
 )
 
 type UserService interface {

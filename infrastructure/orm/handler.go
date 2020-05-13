@@ -14,6 +14,10 @@ func (h *handler) Error() error {
 	return h.db.Error
 }
 
+func (h *handler) Create(value interface{}) repository.SqlHandler {
+	return &handler{db: h.db.Create(value)}
+}
+
 func (h *handler) Select(out interface{}) repository.SqlHandler {
 	return &handler{db: h.db.Find(out)}
 }
